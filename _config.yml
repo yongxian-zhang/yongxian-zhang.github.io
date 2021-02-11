@@ -13,10 +13,10 @@ repo: ""
 
 # LANDING PAGE
 # username: This will displayed on the landing page as your name.
-username: Neumorphism
+username: yongxian
 # typing_text: This will be typed before 'scroll down for more'.
 # > set this to your job title, e.g. Fullstack Developer
-typing_text: Jekyll Theme
+typing_text: 这是我的小屋
 # email: Your E-Mail address for the email button.
 email: email@example.com
 # For every social button you want to display, set your username or userid
