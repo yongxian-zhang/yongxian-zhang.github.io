@@ -1,6 +1,24 @@
 source "https://rubygems.org"
 
-gem "dotenv"
-gem "github-pages"
-gem "jekyll"
-gem "jekyll-github-metadata"
+ruby '2.4.3'
+
+gem 'materialize-sass'
+gem "jekyll", "~> 3.6.2"
+gem "minima", "~> 2.0"
+gem 'rspec'
+gem 'capybara'
+gem "selenium-webdriver"
+gem "rack-jekyll"
+gem "pry"
+gem "puma"
+
+
+group :jekyll_plugins do
+  gem "jekyll-feed", "~> 0.6"
+  gem "jekyll-assets"
+  gem "jekyll-minifier"
+end
+
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gemspec
