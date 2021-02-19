@@ -1,29 +1,22 @@
-<!DOCTYPE html>
-<html>
-    <head>
-      {% if jekyll.environment == 'production' %}
-        {% if site.tag_manager_id %}
-          {% include google_tag_manager.html %}
-        {% elsif site.google_analytics_tracking_id %}
-          {% include google_analytics.html %}
-        {% endif %}
-      {% endif %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/materialize.css">
-      {% if site.syntax_highlighting %}
-        <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/main.css">
-      {% endif %}
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-      <title>{{site.title}}</title>
-    </head>
-    <body>
-      {% if site.tag_manager_id and jekyll.environment == 'production' %}
-        <!-- Google Tag Manager (noscript) -->
-          <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{site.tag_manager_id}}"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
-      {% endif %}
+  <title>
+    {% if page.title == "Home" %}
+      {{ site.title }}
+    {% else %}
+      {{ page.title }} &middot; {{ site.title }}
+    {% endif %}
+  </title>
 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic|Source+Code+Pro:400,700" type="text/css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css" type="text/css">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ site.baseurl }}/favicon.png">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ site.baseurl }}/apple-touch-icon.png">
+  
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}/atom.xml">
+</head>
